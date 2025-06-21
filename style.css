@@ -1,0 +1,114 @@
+@font-face {
+    font-family: Formula1-Regular;
+    src: url(./font/Formula1-Regular_web_0.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Formula1-Bold;
+    src: url(./font/Formula1-Bold_web_0.ttf) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: Formula1-Wide;
+    src: url(./font/Formula1-Wide_web_0.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --primary-color: #FF1800;
+    --bg-color: #0D0D18;
+    --tertiary-color: #FFFFFF;
+}
+
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Formula1-Regular;
+    color: var(--tertiary-color);
+    cursor: default;
+    transition: 0.2s ease all;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.nav > h1 {
+    font-family: Formula1-Bold;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.nav > #about {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#about:hover {
+    color: var(--primary-color);
+}
+
+.content-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+}
+
+.top, .bottom {
+    font-size: 1.5rem;
+}
+
+.top {
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+    align-items: center;
+}
+
+.top > p, .bottom > p {
+    font-family: Formula1-Wide;
+}
+
+.lights {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    /* border: 2px solid; */
+}
+
+.light {
+    width: clamp(40px, 8vw, 200px);
+    height: clamp(40px, 8vw, 200px);
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    /* border: 2px solid blue; */
+}
