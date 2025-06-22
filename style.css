@@ -44,6 +44,10 @@ body {
     background-color: var(--bg-color);
 }
 
+.active {
+    background-color: green !important;
+}
+
 
 .container {
     display: flex;
@@ -111,4 +115,5 @@ body {
     border-radius: 50%;
     background-color: var(--primary-color);
     /* border: 2px solid blue; */
+    transition: none;
 }
