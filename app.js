@@ -13,7 +13,7 @@ let bestReactionTime = 0;
 
 function startDelay() {
     let delay = Math.floor(300 + Math.random() * 600);
-    console.log(delay);
+    // console.log(delay);
     return delay;
 }
 
@@ -39,9 +39,9 @@ function calculateReaction() {
 
     timeText.textContent = `${reactionTime}ms`;
     bestTimeText.textContent = `Best Time - ${bestReactionTime}ms`;
-    console.log(typeof bestReactionTime);
-    console.log(typeof reactionTime);
-    console.log(`reaction time: ${reactionTime}`);
+    // console.log(typeof bestReactionTime);
+    // console.log(typeof reactionTime);
+    // console.log(`reaction time: ${reactionTime}`);
     contentContainer.addEventListener('click', reset);
 }
 
@@ -68,11 +68,11 @@ function main() {
         waitingForGreen = true;
         timeOut = setTimeout(() => {
             startTimer();
-            console.log('started');
+            // console.log('started');
         }, startDelay());
     } else if (waitingForGreen && !timerStarted) {
         info.textContent = 'Jump Start';
-        console.log('jumpStart');
+        // console.log('jumpStart');
         clearTimeout(timeOut);
         reset();
     } else if (timerStarted) {
