@@ -3,6 +3,9 @@ const lights = document.querySelectorAll('.light');
 const info = document.querySelector('#info');
 const bestTimeText = document.querySelector('#best-time');
 const timeText = document.querySelector('#time');
+const aboutModal = document.querySelector('#about-dialog');
+const aboutBtn = document.querySelector('#about');
+const closeBtn = document.querySelector('#close-btn');
 
 let timerStarted = false;
 let waitingForGreen = false;
@@ -81,3 +84,11 @@ function main() {
 }
 
 contentContainer.addEventListener('click', main);
+
+aboutBtn.addEventListener('click', () => {
+    aboutModal.showModal();
+})
+
+closeBtn.addEventListener('click', () => {
+    aboutModal.close();
+})
